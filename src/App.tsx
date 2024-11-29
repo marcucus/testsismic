@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { User } from './types/User';
-import logo from './logo.svg';
-import './App.css';
 import UserTable from './components/userTable/userTable';
 import UserForm from './components/userForm/userForm';
 import SearchBar from './components/searchUser/searchBar';
