@@ -26,24 +26,7 @@ Exécute les tests.
 
 ### STRUCTURE
  
-src/
-├── components/                   # Composants réutilisables
-│   ├── searchUser/               # Composants liés à la recherche
-│   │   ├── FilterButton.tsx      # Bouton pour filtrer les utilisateurs actifs
-│   │   ├── SearchBar.tsx         # Barre de recherche
-│   │
-│   ├── userForm/                 # Gestion du formulaire d'ajout d'utilisateur
-│   │   ├── UserForm.tsx          # Formulaire d'ajout avec validations
-│   │
-│   ├── userTable/                # Gestion du tableau des utilisateurs
-│   │   ├── UserTable.tsx         # Tableau d'affichage des utilisateurs
-│   │   ├── UserTable.test.tsx    # Tests unitaires liés au tableau
-│
-├── types/                        # Définitions des types TypeScript
-│   └── User.ts                   # Interface pour le type `User`
-│
-├── App.tsx                       # Composant principal
-├── index.tsx 
+![alt text](https://github.com/marcucus/testsismic/struct.jpg?raw=ture)
 
 ### DECISION TECHNIQUES
 
