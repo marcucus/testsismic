@@ -26,7 +26,7 @@ Exécute les tests.
 
 ### STRUCTURE
  
-![alt text](https://github.com/marcucus/testsismic/struct.jpg?raw=ture)
+![alt text](https://github.com/marcucus/testsismic/blob/main/struct.jpg?raw=true)
 
 ### DECISION TECHNIQUES
 
