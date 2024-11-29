@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# TEST TECHNIQUE SISMIC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DESCRIPTION
 
-## Available Scripts
+Application web permettant de gérer une liste d'utilisateurs.
 
-In the project directory, you can run:
+## FONCTIONNALITES
+
+- Affichage des utilisateurs dans un tableau.
+- Filtrage des utilisateurs.
+- Ajout et suppression utilisateur.
+
+## INSTALLATION
+
+1. Clonez le dépôt.
+2. Se placer dans le répertoire.
+3. npm install.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Ouvre l'application [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Exécute les tests.
 
-### `npm run build`
+### STRUCTURE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/
+├── components/                   # Composants réutilisables
+│   ├── searchUser/               # Composants liés à la recherche
+│   │   ├── FilterButton.tsx      # Bouton pour filtrer les utilisateurs actifs
+│   │   ├── SearchBar.tsx         # Barre de recherche
+│   │
+│   ├── userForm/                 # Gestion du formulaire d'ajout d'utilisateur
+│   │   ├── UserForm.tsx          # Formulaire d'ajout avec validations
+│   │
+│   ├── userTable/                # Gestion du tableau des utilisateurs
+│   │   ├── UserTable.tsx         # Tableau d'affichage des utilisateurs
+│   │   ├── UserTable.test.tsx    # Tests unitaires liés au tableau
+│
+├── types/                        # Définitions des types TypeScript
+│   └── User.ts                   # Interface pour le type `User`
+│
+├── App.tsx                       # Composant principal
+├── index.tsx 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### DECISION TECHNIQUES
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Utilisation de TypeScript
+Facilite la maintenance grâce au typage strict.
+Réduit les erreurs en développement grâce à l'autocomplétion et la vérification des types.
 
-### `npm run eject`
+2. Headless UI pour la modale
+Fournit une modale accessible et facile à personnaliser.
+Permet de se concentrer sur les fonctionnalités sans réinventer la roue.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. TailwindCSS
+Accélère le développement avec des classes utilitaires.
+Simplifie le style sans nécessiter de fichiers CSS volumineux.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Tests avec JEST
+Permet de tester le comportement de l'interface utilisateur.

@@ -59,8 +59,8 @@ function App() {
                 </p>
             </div>
             <div className="flex items-center gap-2 pt-4 sm:pl-16 sm:pt-0 sm:flex-none">
-              <div>Is Active only ? OFF / ON
-                <FilterButton onFilter={() => setShowActive((prev) => !prev)}/>
+              <div className="flex gap-2">Is Active - {showActive ? "" : "OFF"}
+                <FilterButton onFilter={() => setShowActive((prev) => !prev)}/> {showActive ? "ON" : ""} -
               </div>
                 <button
                     type="button"
@@ -71,7 +71,13 @@ function App() {
                 </button>
             </div>
         </div>
-        {modal ? <UserForm onAdd={handleAddUser} onClose={handleOpenModal}/> : ""}
+
+        {modal ? 
+          <UserForm onAdd={handleAddUser} onClose={handleOpenModal}/> 
+        : 
+          ""
+        }
+        
         <SearchBar onSearch={setSearchUser}/>
         <UserTable users={userFilter} onDelete={handleDeleteUser}/>
       </div>
