@@ -25,7 +25,7 @@ Ouvre l'application [http://localhost:3000](http://localhost:3000) dans le navig
 Exécute les tests.
 
 ### STRUCTURE
-
+ 
 src/
 ├── components/                   # Composants réutilisables
 │   ├── searchUser/               # Composants liés à la recherche
